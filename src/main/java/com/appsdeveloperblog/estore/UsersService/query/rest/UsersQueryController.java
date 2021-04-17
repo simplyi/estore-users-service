@@ -5,8 +5,6 @@
  */
 package com.appsdeveloperblog.estore.UsersService.query.rest;
  
-import com.appsdeveloperblog.core.model.User;
-import com.appsdeveloperblog.core.query.FetchUserPaymentDetailsQuery;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.appsdeveloperblog.estore.core.model.User;
+import com.appsdeveloperblog.estore.core.query.FetchUserPaymentDetailsQuery;
 
 @RestController
 @RequestMapping("/users")

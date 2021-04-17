@@ -5,11 +5,12 @@
  */
 package com.appsdeveloperblog.estore.UsersService.query;
 
-import com.appsdeveloperblog.core.model.PaymentDetails;
-import com.appsdeveloperblog.core.model.User;
-import com.appsdeveloperblog.core.query.FetchUserPaymentDetailsQuery;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.stereotype.Component;
+
+import com.appsdeveloperblog.estore.core.model.PaymentDetails;
+import com.appsdeveloperblog.estore.core.model.User;
+import com.appsdeveloperblog.estore.core.query.FetchUserPaymentDetailsQuery;
  
 
 @Component
@@ -26,14 +27,14 @@ public class UserEventsHandler {
                 .validUntilYear(2030)
                 .build();
 
-        User userRest = User.builder()
+        User user = User.builder()
                 .firstName("Sergey")
                 .lastName("Kargopolov")
                 .userId(query.getUserId())
                 .paymentDetails(paymentDetails)
                 .build();
 
-        return userRest;
+        return user;
     }
     
     
